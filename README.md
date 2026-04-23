@@ -18,7 +18,7 @@ This project cleans raw Play Store data, engineers new practical features, visua
 - **Exploratory Data Analysis (EDA)**: Utilizes rich visual libraries (Matplotlib, Seaborn, Plotly) to chart the distribution of categories, the relationship between size and ratings, and the breakdown of free vs. paid apps.
 - **Predictive ML Modeling**: Leverages powerful algorithms from `scikit-learn` (Random Forest, Linear/Logistic Regression) to model quantitative targets such as continuous app ratings and categorical success metrics.
 
-## 🛠 Tech Stack
+##  Tech Stack
 - **Languages / Core**: `Python`, `pandas`, `numpy`
 - **Machine Learning**: `scikit-learn`
 - **Visualization**: `matplotlib`, `seaborn`, `plotly`
@@ -35,7 +35,7 @@ GOOGLE PLAYSTORE ANALYSIS/
 └── README.md                             # Project Documentation
 ```
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 Make sure you have Python installed on your system along with the Jupyter Notebook environment.
