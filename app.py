@@ -158,7 +158,10 @@ app = dash.Dash(
     __name__,
     suppress_callback_exceptions=True,
     meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}],
-    title="PlayStore ML Intelligence"
+    title="PlayStore ML Intelligence",
+    external_scripts=[
+        "https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"
+    ],
 )
 
 # ─── Helper: KPI Card ──────────────────────────────────────────
@@ -213,8 +216,8 @@ def _build_feature_importance_chart():
 HEADING_TEXT = "Google Play Store ML Intelligence System"
 
 app.layout = html.Div([
-    # ── Particle canvas (background) ──
-    html.Canvas(id="particle-canvas"),
+    # ── Particle background (tsParticles) ──
+    html.Div(id="tsparticles"),
 
     # ── Main container ──
     html.Div(id="app-container", children=[
@@ -228,7 +231,7 @@ app.layout = html.Div([
             ),
             html.Span(className="typing-cursor"),
         ]),
-        html.P("Powered by Random Forest · Exploratory Data Analysis · Live Predictions",
+        html.P("Powered by RUSHIKESH FARAKATE.",
                className="subtitle"),
 
         # ── KPI Cards ──
@@ -365,7 +368,7 @@ app.layout = html.Div([
         html.Div(className="footer", children=[
             html.Span("Built with "),
             html.Span("♥", className="heart"),
-            html.Span(" by Rushikesh Farakate · Powered by Dash & scikit-learn"),
+            html.Span(" by Rushikesh Farakate ·"),
         ]),
     ]),
 ])

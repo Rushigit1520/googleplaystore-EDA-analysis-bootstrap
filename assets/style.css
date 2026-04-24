@@ -10,8 +10,8 @@
 :root {
     --bg-primary: #06060f;
     --bg-secondary: #0c0c1d;
-    --bg-card: rgba(15, 15, 35, 0.55);
-    --bg-card-hover: rgba(20, 20, 50, 0.7);
+    --bg-card: rgba(15, 15, 35, 0.05);
+    --bg-card-hover: rgba(20, 20, 50, 0.12);
 
     --neon-cyan: #00f0ff;
     --neon-purple: #b44aff;
@@ -20,12 +20,12 @@
     --neon-blue: #3d7aff;
     --neon-orange: #ff8c00;
 
-    --text-primary: #e8e8f0;
-    --text-secondary: #9898b8;
-    --text-muted: #5a5a7a;
+    --text-primary: #ffffff;
+    --text-secondary: #d0d0e8;
+    --text-muted: #8080a0;
 
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-blur: 18px;
+    --glass-border: rgba(255, 255, 255, 0.05);
+    --glass-blur: 20px;
     --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
 
     --radius-sm: 10px;
@@ -57,6 +57,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     line-height: 1.6;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
 }
 
 /* ---------- Custom Scrollbar ---------- */
@@ -71,14 +72,24 @@ body {
     border-radius: 3px;
 }
 
-/* ---------- Particle Canvas ---------- */
-#particle-canvas {
+/* ---------- tsParticles Container ---------- */
+#tsparticles {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(
+        ellipse at 50% 30%,
+        rgba(15, 10, 40, 0.8) 0%,
+        rgba(6, 6, 15, 1) 70%
+    );
+    filter: contrast(1.05) brightness(1.1);
+}
+
+#tsparticles canvas {
     pointer-events: none;
 }
 
@@ -185,9 +196,9 @@ body {
 
 .glass-card:hover {
     background: var(--bg-card-hover);
-    border-color: rgba(255, 255, 255, 0.14);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55), 0 0 20px rgba(0, 240, 255, 0.06);
+    border-color: rgba(0, 240, 255, 0.4);
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55), 0 0 20px rgba(0, 240, 255, 0.15), inset 0 0 15px rgba(0, 240, 255, 0.05);
 }
 
 .glass-card:hover::before {
@@ -311,7 +322,9 @@ body {
 /* Dash Dropdown Overrides */
 .dash-dropdown .Select-control,
 .dash-dropdown .Select-menu-outer {
-    background: rgba(15, 15, 35, 0.8) !important;
+    background: rgba(15, 15, 35, 0.3) !important;
+    backdrop-filter: blur(var(--glass-blur)) !important;
+    -webkit-backdrop-filter: blur(var(--glass-blur)) !important;
     border: 1px solid var(--glass-border) !important;
     color: var(--text-primary) !important;
     border-radius: var(--radius-sm) !important;
@@ -377,7 +390,9 @@ body {
 
 /* Dash Input Override */
 .dash-input input {
-    background: rgba(15, 15, 35, 0.7) !important;
+    background: rgba(15, 15, 35, 0.3) !important;
+    backdrop-filter: blur(var(--glass-blur)) !important;
+    -webkit-backdrop-filter: blur(var(--glass-blur)) !important;
     border: 1px solid var(--glass-border) !important;
     border-radius: var(--radius-sm) !important;
     color: var(--text-primary) !important;
