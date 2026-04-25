@@ -1,5 +1,10 @@
 # 🚀 Google Play Store ML Intelligence System
 
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+![Dash](https://img.shields.io/badge/Dash-Plotly-008DE4?style=for-the-badge&logo=plotly&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Random%20Forest-FF6F00?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![UI](https://img.shields.io/badge/UI-Glassmorphism%20%26%20Neon-8A2BE2?style=for-the-badge)
+
 ### By Rushikesh Farakate
 
 A **futuristic, dark-neon themed** ML Intelligence Dashboard that performs deep Exploratory Data Analysis (EDA) and live **machine learning predictions** on 10,000+ Google Play Store applications — built with Dash, scikit-learn, and Plotly.
